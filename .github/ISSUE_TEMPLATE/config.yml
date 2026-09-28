@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Official CLI Documentation
+    url: https://imagerry.com/cli
+    about: Read the complete command-line guide, flags, API endpoints, and MCP server docs.
+  - name: ✉️ Contact Support
+    url: https://imagerry.com/contact
+    about: For licensing assistance, billing, or private support inquiries.
