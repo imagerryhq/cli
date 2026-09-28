@@ -1,0 +1,59 @@
+name: 🐛 Bug Report
+description: Report a bug, crash, or unexpected behavior in Imagerry CLI
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Before opening, please ensure you are running the latest version of `@imagerry/cli`.
+
+  - type: input
+    id: version
+    attributes:
+      label: Imagerry CLI Version
+      description: Run `imagerry --version` and paste the output here.
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What operating system are you using?
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Linux (x86_64)
+        - Linux (ARM64)
+        - Windows (x86_64)
+        - Windows (ARM64)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the bug
+      description: A clear and concise description of what happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: The exact command or script executed.
+      placeholder: |
+        1. Run `imagerry -i screenshot.png -o out.webp --preset mesh`
+        2. See error ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Terminal Output / Error Logs
+      description: Please paste the full terminal output or error trace.
+      render: shell
